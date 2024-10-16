@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-
+import fevicon from '../assets/fevicon logo.png';
 
 function Navbar() {
   const [sticky, setSticky] = useState(false)
@@ -68,7 +68,7 @@ function Navbar() {
                 </li>
               </ul>
             </div>
-            {/* <img src={fevicon}className="w-[3rem] ml-5 h-[4rem]" /> */}
+           <img src={fevicon}className="w-[3rem] ml-5 h-[3rem]" /> 
            
             <a className=" text-2xl poppins-semibold ml-9 md: text-center">
               UrbanCart

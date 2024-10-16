@@ -105,7 +105,7 @@ function Home() {
     <>
 
     <Navbar/>
-    <div className='w-full h-auto pt-[50px] pb-[50px] md:pt-[100px] md:pb-[100px]'>
+    <div className='w-full h-auto md:mt-[60px] pt-[50px] pb-[50px] md:pt-[100px] '>
   <div className='w-full md:w-[1200px] mx-auto'>
     <div className='flex flex-col md:flex-row justify-around'>
       
