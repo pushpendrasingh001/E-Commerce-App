@@ -1,7 +1,9 @@
 import React from 'react';
 import Navbar from './Navbar'
 import Footer from './Footer'
+import {useNavigate} from 'react-router-dom'
 function ManageAc() {
+  const navigate=useNavigate();
   return (
     <>
     <Navbar/>
@@ -15,7 +17,7 @@ function ManageAc() {
 
           <div className="flex flex-col lg:flex-row">
             {/* Sidebar */}
-            <div className="w-full lg:w-[230px] mt-5 lg:mt-10 h-auto lg:h-[650px] lg:ml-[50px] p-5  mx-4 lg:mx-0">
+            <div className="w-full lg:w-[230px] mt-5  h-auto lg:h-[650px] lg:ml-[50px] p-5  mx-4 lg:mx-0">
               <p className="text-xl poppins-regular">Manage My Account</p>
               <div className="lg:ml-[10px]">
                 <p className="poppins-regular mt-8 text-red-500">My Profile</p>
@@ -31,7 +33,7 @@ function ManageAc() {
             </div>
 
             {/* Profile Editing Section */}
-            <div className="w-full lg:w-[700px] lg:ml-[180px] h-auto lg:h-[650px] mt-5 lg:mt-10 p-5   mx-4 lg:mx-0">
+            <div className="w-full lg:w-[700px] lg:ml-[180px] h-auto lg:h-[650px] mt-5  p-5   mx-4 lg:mx-0">
               <span className="text-red-500 text-2xl lg:text-3xl font-semibold">
                 Edit Your Profile
               </span>
@@ -96,10 +98,8 @@ function ManageAc() {
                 </div>
               </div>
 
-              <div className="flex justify-center lg:justify-end gap-4 mt-10">
-                <button className="border-2 h-[56px] rounded-md w-[120px] lg:w-[150px] text-lg lg:text-xl poppins-regular hover:bg-red-500 hover:text-white">
-                  Cancel
-                </button>
+              <div className="flex justify-center lg:justify-end gap-4 mt-5">
+              <button  className="border-2 h-[56px] rounded-md w-[120px] lg:w-[150px] text-lg lg:text-xl poppins-regular hover:bg-red-500 hover:text-white hover:border-black" onClick={()=>navigate('/')}> Cancel</button>
                 <button className="bg-red-500 text-white h-[56px] rounded-md hover:bg-white hover:text-black border-2 border-black w-[160px] lg:w-[201px] text-lg lg:text-xl poppins-regular">
                   Save Changes
                 </button>
