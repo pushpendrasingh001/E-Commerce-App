@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
-import fevicon from '../assets/fevicon logo.png';
-
+import fevicon from '../assets/navbar/fevicon logo.png';
+import cart from '../assets/navbar/cart.svg';
+import search from '../assets/navbar/search.svg';
+import wishlist from '../assets/navbar/wishlist.svg';
 function Navbar() {
   const [sticky, setSticky] = useState(false)
   useEffect(() => {
@@ -68,13 +70,13 @@ function Navbar() {
                 </li>
               </ul>
             </div>
-           <img src={fevicon}className="w-[3rem] ml-5 h-[3rem]" /> 
+           <img src={fevicon}className="w-[3rem] lg:ml-5 h-[3rem]" /> 
            
-            <a className=" text-2xl poppins-semibold ml-9 md: text-center">
+            <a className=" text-2xl poppins-semibold lg:ml-9 ml-2 md: text-center">
               UrbanCart
             </a>
           </div>
-          <div className="navbar-center hidden lg:flex">
+          <div className="navbar-center  hidden lg:flex ">
             <ul className="menu menu-horizontal px-1  text-lg poppins-regular">
               <li>
                 <a href="/">Home</a>
@@ -91,8 +93,26 @@ function Navbar() {
                 <a href="/signup">Sign up</a>
               </li>
             </ul>
+          
           </div>
-          <div className="navbar-end">
+        
+          <div className="navbar-end ">
+          <div className=" flex gap-2 items-center p-2 md:w-[347px] md:h-[38px] w-full">
+ 
+  <span className="flex gap-1 w-full md:w-auto border rounded-md border-black  ">
+    <input
+      className="h-full px-2 w-full bg-transparent md:w-auto border-none focus:outline-none poppins-regular mt-1" 
+      placeholder="What are you looking for ? " style={{fontSize: '12px'}}
+      type="text"
+    />
+    <img src={search} alt="Search" className="h-5 cursor-pointer w-5" /> 
+  </span>
+
+
+  <img src={wishlist} alt="Wishlist" className="h-5 cursor-pointer w-5 hidden md:block" /> 
+  <img src={cart} alt="Cart" className="h-5 w-5 cursor-pointer hidden md:block" /> 
+</div>
+
           <div className="dropdown  flex justify-end dropdown-end">
       <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
         <div className="w-10 rounded-full">

@@ -533,45 +533,49 @@ function Home() {
 </div>
 
 {/* new arrival */}
-<div className='w-full h-auto pt-[30px] pb-[30px] md:pt-[50px] md:pb-[50px]'>
-  <div className='w-full max-w-screen-xl h-auto mx-auto px-4'>
-    <div className='h-auto w-full shadow-lg'>
-      <div className='flex justify-between m-5 flex-wrap'>
-        <span className='flex flex-col gap-y-3'>
-          <h2 className="text-red-600 poppins-semibold text-lg">Featured</h2>
-          <h2 className="text-2xl poppins-semibold text-gray-900">New Arrival</h2>
-        </span>
-        <span className='flex items-center space-x-4'>
-          <button>
-            <img src={leftarrow} alt="Left arrow" />
-          </button>
-          <button>
-            <img src={rightarrow} alt="Right arrow" />
-          </button>
-        </span>
+<div className="w-full md:w-[1170px] mx-auto mt-10 relative">
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 h-auto">
+    {/* First Large Image */}
+    <div className="md:col-span-2 lg:row-span-4 lg:col-span-2 w-full md:h-[600px] bg-black relative">
+      <img src={playstation} className="h-[511px] absolute w-[511px] top-[87px] left-[50px]" alt="Playstation" />
+      <div className='absolute w-[242px] h-auto bottom-10 left-5'>
+        <p className='poppins-semibold text-white text-xl'>Play Station 5</p>
+        <p className='poppins-regular text-sm mt-3 text-white'>
+          Black and White version of the PS5 coming out on sale.
+        </p>
+        <a className='poppins-regular hover:underline absolute text-sm mt-[10px] text-white' href="/">Shop Now</a>
       </div>
     </div>
 
-    {/* Product Grid */}
-    <div className="grid grid-rows-4 grid-flow-col gap-4 h-auto w-full mt-10">
-      {/* First Large Image */}
-      <div className="row-span-4 col-span-2 bg-red-100">
-        <img src={playstation} className="h-full w-full object-cover" alt="Playstation" />
+    {/* Top Right Image */}
+    <div className="md:col-span-2 lg:row-span-2 lg:col-span-2 bg-black h-[284px] relative">
+      <img className="h-[284px] w-full object-cover" src={women} alt="Women" />
+      <div className='absolute w-[242px] h-auto bottom-10 left-5'>
+        <p className='poppins-semibold text-white text-xl'>Women's Collections</p>
+        <p className='poppins-regular text-sm mt-3 text-white'>
+          Featured women collections that give you another vibe.
+        </p>
+        <a className='poppins-regular hover:underline absolute text-sm mt-[10px] text-white' href="/">Shop Now</a>
       </div>
+    </div>
 
-      {/* Top Right Image */}
-      <div className="row-span-2 col-span-2 bg-slate-200">
-        <img className="h-full w-full object-cover" src={women} alt="Women" />
+    {/* Bottom Left Image */}
+    <div className="lg:row-span-2 md:col-span-1 bg-opacity-90 bg-black relative h-[284px]">
+      <img className="h-[222px] w-[210px] absolute mt-9 ml-7" src={speaker} alt="Speaker" />
+      <div className='absolute w-[191px] h-auto bottom-10 left-8'>
+        <p className='poppins-semibold text-white text-xl'>Speakers</p>
+        <p className='poppins-regular text-sm mt-2 text-white'>Amazon wireless speakers.</p>
+        <a className='poppins-regular hover:underline absolute text-sm mt-2 text-white' href="/">Shop Now</a>
       </div>
+    </div>
 
-      {/* Bottom Left Image */}
-      <div className="row-span-2 col-span-1 bg-green-100">
-        <img className="h-full w-full object-cover" src={speaker} alt="Speaker" />
-      </div>
-
-      {/* Bottom Right Image */}
-      <div className="row-span-2 col-span-1 bg-yellow-100">
-        <img className="h-full w-full object-cover" src={gucci} alt="Gucci" />
+    {/* Bottom Right Image */}
+    <div className="lg:row-span-2 md:col-span-1 bg-opacity-90 bg-black relative h-[284px]">
+      <img className="h-[222px] w-[210px] absolute mt-9 ml-7" src={gucci} alt="Gucci" />
+      <div className='absolute w-[191px] h-auto bottom-10 left-8'>
+        <p className='poppins-semibold text-white text-xl'>Perfume</p>
+        <p className='poppins-regular text-sm mt-2 text-white'>GUCCI INTENSE OUD EDP</p>
+        <a className='poppins-regular hover:underline absolute text-sm mt-2 text-white' href="/">Shop Now</a>
       </div>
     </div>
   </div>
