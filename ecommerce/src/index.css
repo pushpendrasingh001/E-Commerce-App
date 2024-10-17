@@ -2,7 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
+.slick-slide>div{
+  margin: 0 10px;
+}
 .poppins-thin {
   font-family: "Poppins", sans-serif;
   font-weight: 100;

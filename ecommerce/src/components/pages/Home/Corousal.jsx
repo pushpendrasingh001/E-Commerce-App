@@ -1,66 +1,48 @@
-import React from 'react'
-import Slider from 'react-slick'
+
+import heroimage from '../../../assets/Home/hero/hero.png'
+import iphone from '../../../assets/Home/hero/iphone.png'
+import React from 'react';
+import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import heroimage from '../../../assets/Home/hero/hero.png'
-function Carousal() {
-  const data=[
 
-    {
-      id:1,
-  img:heroimage
-},
-{
-  id:2,
-img:heroimage
-},   {
-  id:3,
-img:heroimage
-},   {
-  id:4,
-img:heroimage
-},   {
-  id:5,
-img:heroimage
-},   {
-  id:5,
-img:heroimage
-},
+function Carousal({ images }) {
 
-]
+  const defaultImages = [
+    { id: 1, img: iphone },
+    { id: 2, img: heroimage },
+    { id: 3, img: heroimage },
+    { id: 4, img: heroimage },
+    { id: 5, img: heroimage },
+  ];
 
- var settings = {
+  
+  const data = images && images.length > 0 ? images : defaultImages;
 
-    infinite:true,
+
+  const settings = {
+    infinite: true,
     speed: 5000,
     slidesToShow: 1,
     slidesToScroll: 1,
     initialSlide: 0,
     autoplay: true,
- 
     autoplaySpeed: 5000,
-    
-    
   };
-  return(<>
-  <div >
+
+  return (
+    <div className="carousel-container">
       <Slider {...settings}>
-        
- {data.map((s)=>(
-
-  <div key={s.id}>
-<img src={s.img} />
-  
-
-   </div>
-
-
-))}
-
+        {data.map((s) => (
+          <div className="carousel-slide bg-red-100 w-[892px] h-[344px] relative" key={s.id}>
+            <div className="absolute w-[892px] h-[344px]">
+              <img className="w-full h-full object-cover" src={s.img} alt={`Slide ${s.id}`} />
+            </div>
+          </div>
+        ))}
       </Slider>
-  </div>
-  </>)
-
+    </div>
+  );
 }
 
-export default Carousal
+export default Carousal;
