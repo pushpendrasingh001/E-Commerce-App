@@ -25,7 +25,7 @@ function Navbar() {
         <div
           className={`navbar fixed top-0 left-0 bg-tranparent  right-0 z-50 ${
             sticky
-              ? "sticky-navbar shadow-md bg-slate-300 duration-300 translate-all ease-in-out"
+              ? "sticky-navbar shadow-md bg-blue-100 duration-300 translate-all ease-in-out"
               : ""
           }`}
         >
@@ -99,18 +99,19 @@ function Navbar() {
           <div className="navbar-end ">
           <div className=" flex gap-2 items-center p-2 md:w-[347px] md:h-[38px] w-full">
  
-  <span className="flex gap-1 w-full md:w-auto border rounded-md border-black  ">
-    <input
-      className="h-full px-2 w-full bg-transparent md:w-auto border-none focus:outline-none poppins-regular mt-1" 
+  <span className="flex gap-1 w-full h-[38px] border-1 rounded-md  md:w-auto  ">
+     <input
+      className="h-full px-2 w-full bg-transparent md:w-auto border-none  focus:outline-none poppins-regular " 
       placeholder="What are you looking for ? " style={{fontSize: '12px'}}
       type="text"
-    />
-    <img src={search} alt="Search" className="h-5 cursor-pointer w-5" /> 
+    /> 
+
+    <img src={search} alt="Search" className="h-6 cursor-pointer mt-1 w-6" /> 
   </span>
 
 
-  <img src={wishlist} alt="Wishlist" className="h-5 cursor-pointer w-5 hidden md:block" /> 
-  <img src={cart} alt="Cart" className="h-5 w-5 cursor-pointer hidden md:block" /> 
+  <img src={wishlist} alt="Wishlist" className="h-6 cursor-pointer w-6 hidden md:block" /> 
+  <img src={cart} alt="Cart" className="h-7 w-7 cursor-pointer hidden md:block" /> 
 </div>
 
           <div className="dropdown  flex justify-end dropdown-end">
